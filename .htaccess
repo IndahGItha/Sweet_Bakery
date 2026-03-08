@@ -1,0 +1,22 @@
+# Sweet Bakery - .htaccess
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes
+
+# Protect database file
+<Files "database.sql">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# PHP Settings
+php_value upload_max_filesize 2M
+php_value post_max_size 2M
+php_value max_execution_time 300
+php_value max_input_time 300

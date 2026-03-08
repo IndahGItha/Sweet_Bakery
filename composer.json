@@ -1,0 +1,30 @@
+{
+    "name": "sweetbakery/sweet-bakery",
+    "description": "Sweet Bakery - Freshly Baked Every Day - Aplikasi Toko Roti dengan PHP OOP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sweet Bakery Developer",
+            "email": "developer@sweetbakery.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "vlucas/phpdotenv": "^5.5",
+        "phpmailer/phpmailer": "^6.8",
+        "dompdf/dompdf": "^2.0",
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "SweetBakery\\\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SweetBakery\\\\Tests\\\\": "tests/"
+        }
+    }
+}

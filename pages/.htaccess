@@ -1,0 +1,4 @@
+# Sweet Bakery Pages - .htaccess
+
+# Disable directory browsing
+Options -Indexes

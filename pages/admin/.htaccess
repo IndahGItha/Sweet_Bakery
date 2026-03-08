@@ -1,0 +1,6 @@
+# Sweet Bakery Admin - .htaccess
+
+# Protect admin folder (optional - can add IP restriction)
+# Order deny,allow
+# Deny from all
+# Allow from 127.0.0.1

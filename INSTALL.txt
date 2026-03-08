@@ -1,0 +1,114 @@
+================================================================================
+                    SWEET BAKERY - PANDUAN INSTALASI
+                         Freshly Baked Every Day
+================================================================================
+
+PERSYARATAN SISTEM:
+-------------------
+- PHP 7.4 atau lebih tinggi
+- MySQL 5.7 atau lebih tinggi
+- Web Server (Apache/Nginx)
+- Browser modern (Chrome, Firefox, Safari, Edge)
+
+CARA INSTALASI:
+---------------
+
+1. EXTRACT FILE
+   - Extract file sweet-bakery.zip ke folder htdocs (XAMPP) 
+     atau www (WAMP/Laragon)
+   - Path: C:\xampp\htdocs\sweet-bakery\
+
+2. BUAT DATABASE
+   - Buka phpMyAdmin (http://localhost/phpmyadmin)
+   - Klik "New" atau "Buat Database"
+   - Nama database: sweet_bakery
+   - Klik "Create"
+   
+3. IMPORT DATABASE
+   - Pilih database "sweet_bakery"
+   - Klik tab "Import"
+   - Pilih file "database.sql" dari folder sweet-bakery
+   - Klik "Go" atau "Kirim"
+   
+4. KONFIGURASI DATABASE (JIKA PERLU)
+   - Buka file: includes/koneksi.php
+   - Sesuaikan setting:
+   
+     $host = "localhost";
+     $username = "root";      // Username MySQL Anda
+     $password = "";          // Password MySQL Anda
+     $database = "sweet_bakery";
+   
+5. SET PERMISSION FOLDER (JIKA DI LINUX/MAC)
+   - chmod 777 uploads/
+   - chmod 777 uploads/pembayaran/
+   
+6. AKSES WEBSITE
+   - Buka browser
+   - Ketik: http://localhost/sweet-bakery/
+   
+DEFAULT LOGIN:
+--------------
+Admin:
+  Username: admin
+  Password: 888
+
+FITUR APLIKASI:
+---------------
+
+UNTUK PELANGGAN:
+- Beli langsung tanpa login (Guest)
+- Register/Login sebagai pelanggan
+- Lihat daftar roti dan kue
+- Tambah ke keranjang
+- Checkout dengan input alamat
+- Upload bukti pembayaran (scan QR)
+- Lihat riwayat pesanan
+
+UNTUK ADMIN:
+- Dashboard dengan statistik
+- Kelola roti (Tambah, Edit, Hapus)
+- Kelola stok roti
+- Kelola pesanan (Update status)
+- Verifikasi pembayaran
+- Lihat data pelanggan
+
+STRUKTUR MENU:
+--------------
+Home Page (index.php)
+  ├── Beli Langsung (Guest) → pages/belanja.php
+  ├── Login Pelanggan → pages/login.php
+  ├── Daftar Akun → pages/register.php
+  └── Login Admin → pages/admin/login.php
+
+TROUBLESHOOTING:
+----------------
+
+1. ERROR: "Koneksi gagal"
+   - Cek MySQL sudah running
+   - Cek username/password database
+   - Cek nama database sudah benar
+
+2. ERROR: "Unable to access"
+   - Cek folder sudah di htdocs dengan benar
+   - Cek URL: http://localhost/sweet-bakery/
+
+3. UPLOAD GAMBAR GAGAL
+   - Cek folder uploads/ ada dan writable
+   - Cek ukuran file < 2MB
+   - Cek format file (jpg, jpeg, png)
+
+4. SESSION ERROR
+   - Clear browser cache
+   - Restart browser
+   - Cek cookies enabled
+
+KONTAK & SUPPORT:
+-----------------
+Jika ada pertanyaan atau masalah,
+silakan hubungi kami di:
+Email: info@sweetbakery.com
+
+================================================================================
+                        Selamat Menggunakan! 
+================================================================================
